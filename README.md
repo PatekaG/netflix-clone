@@ -1,2 +1,0 @@
-# Netflix-zaio-page
- netflix
