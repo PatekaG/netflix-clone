@@ -9,16 +9,18 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background: black;
 }
 
 h1{
     font-size: 3.25rem;
-    color: white;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 h2{
     font-size: 1.25rem;
-    color: white;
+    color: #ffffff;
     margin-top: 10px;
 }
 
@@ -64,7 +66,7 @@ h5 {
     height: 100vh;
     position: relative;
     z-index: 2;
-    border-bottom: 10px solid #222222;
+    /* border-bottom: 10px solid #222222; */
 }
 
 .overlay {
@@ -72,7 +74,7 @@ h5 {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 60%;
+    opacity: 80%;
     position: absolute;
     top: 0;
 }
@@ -83,7 +85,9 @@ h5 {
     align-items: center;
     justify-content: space-between;
     height: 45px;
-    margin: 0px 45px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin:0px 45px;
     padding-top: 45px;
 }
 
@@ -96,16 +100,17 @@ h5 {
 
 .navbar > a {
     padding: 10px 20px;
-    color: white;
+    color: #ffffff;
     background-color: #E50914;
     text-decoration: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    height: 40px;
-    width: 95px;
+    font-size: 14px;
+    height: 35px;
+    width: 90px;
 }
+
 .banner-container {
     color: white;
     display: flex;
@@ -149,32 +154,201 @@ h5 {
     font-weight: bold;
 }
 
-.info-container {
-    background-color: black;
-    color: white;
-    display: flex;
-    padding: 70px 45px;
-    border-bottom: 10px solid #222222;
-}
+/* TRENDING SECTION */
 
-.tv-container {
+.curved-section {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 1px; 
+    overflow: hidden;
 }
 
-.info {
+.curved-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to top, #ff0033, transparent); 
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.trending-container {
+    margin:45px auto;
+    width: 83%;
+    margin-left: 110px;
+    margin-bottom: 10px;
+}
+
+.trending-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carousel {
     display: flex;
-    flex-direction: column;
+    overflow-x: auto;
+    gap: 35px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 200px;
+    flex: 0 0 auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.rank {
+    position: absolute;
+    bottom: -10px;
+    left: -15px;
+    font-size: 95px;
+    font-weight: 700;
+    color: black;
+    -webkit-text-stroke: 2px rgb(248, 248, 248);  
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.arrows {
+    align-self: center;
     justify-content: center;
 }
-.tv-container img{
-    z-index: 1;
+
+.arrows button {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 25px;
+    height: 120px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: rgb(47, 46, 46);
 }
-.tv-container video{
-    position: absolute;
+
+/* MORE REASON SECTION */
+
+.container {
+    padding: 20px;
+    background: black;
 }
+
+.container h2{
+    color: #ffffff;
+    margin-left: 82px;
+    font-size: 22px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(to bottom, #1a1a2e, #0f0f1f);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.card p {
+    color: #747280;
+    font-size: 14px;
+}
+
+.card-picture svg {
+    float: right;
+    align-items: right;
+    justify-content: right;
+}
+
+
+/* FAQ SECTION */
+
+h6{
+    color: #fff;
+    font-size: 23px;
+}
+.faq-container {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: #333;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.faq-question:hover {
+    background: rgb(109, 109, 109);
+}
+.faq-question {
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    background: #2d2d2d;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.faq-question span {
+    float: right;
+    font-size: 35px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #444;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    padding: 10px 0;
+    margin: 0;
+    color: #fff;
+    font-size: 22px;
+}
+
+.faq-item input {
+    display: none;
+}
+
+input:checked + .faq-question + .faq-answer {
+    max-height: 200px; 
+    padding: 15px;
+}
+
+/* FOOTER SECTION */
 
 .footer {
     background: black;
@@ -182,25 +356,28 @@ h5 {
 }
 .footer-items {
     margin: 0 47.5px;
-    padding: 70px 45px;
+    padding: 30px 45px;
 }
 
 .footer-top{
     margin-bottom: 30px;
 }
 .footer ul li, .questions-title{
-    color: #757575;
+    color: #838383;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .footer-links li{
     font-size: 13px;
+    font-weight: 600;
     line-height: 2;
 }
 
-.footer ul li:hover, .questions-title:hover {
+/* .footer ul li:hover, .questions-title:hover {
     text-decoration: underline;
     cursor: pointer;
-}
+} */
 
 .questions-title {
     cursor: pointer;
@@ -213,9 +390,9 @@ h5 {
 }
 
 .language{
-    height: 53px;
-    width: 140px;
-    color: #999999;
+    height: 33px;
+    width: 130px;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -230,9 +407,19 @@ h5 {
     width: 80%;
     appearance: none;
     background: black;
-    color: #999999;
+    color: #fff;
     border: none;
     background: url(./assets/carrotfinal.png) no-repeat 80%;
 }
 
+.language option {
+    background: black;
+}
+
+p {
+    color: #999999;
+    margin-top: 35px;
+    margin-bottom: 80px;
+    font-size: 13px;
+}
 
