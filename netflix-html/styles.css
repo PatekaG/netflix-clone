@@ -177,7 +177,8 @@ h5 {
 .trending-container {
     margin:45px auto;
     width: 83%;
-    margin-left: 110px;
+    margin-left: 130px;
+    padding-right: 30px;
     margin-bottom: 10px;
 }
 
@@ -203,6 +204,11 @@ h5 {
 .carousel-item img {
     width: 100%;
     border-radius: 10px;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1);
+    overflow-y: hidden;
 }
 
 .rank {
@@ -245,7 +251,7 @@ h5 {
 
 .container h2{
     color: #ffffff;
-    margin-left: 82px;
+    margin-left: 100px;
     font-size: 22px;
 }
 
@@ -259,10 +265,10 @@ h5 {
 
 .card {
     background: linear-gradient(to bottom, #1a1a2e, #0f0f1f);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    height: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 240px;
+    height: 340px;
     text-align: left;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
@@ -270,36 +276,40 @@ h5 {
 .card h3 {
     color: #ffffff;
     font-size: 22px;
+    margin: 15px;
+    list-style: none;
 }
 
 .card p {
     color: #747280;
     font-size: 14px;
+    font-weight: 800;
+    margin: 15px;
+    margin-bottom: 80px;
 }
 
-.card-picture svg {
+.card-icon {
     float: right;
-    align-items: right;
-    justify-content: right;
 }
 
 
 /* FAQ SECTION */
 
 h6{
-    color: #fff;
+    color: #ffffff;
     font-size: 23px;
 }
 .faq-container {
     width: 100%;
     margin: auto;
     text-align: left;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 120px;
+    padding-right: 120px;
     margin-top: 40px;
 }
 
 .faq-item {
+    font-size: 20px;
     background: #333;
     margin: 10px 0;
     overflow: hidden;
@@ -310,12 +320,11 @@ h6{
 }
 .faq-question {
     display: block;
-    font-size: 22px;
+    font-size: 28px;
     color: #fff;
     padding: 15px;
     cursor: pointer;
     background: #2d2d2d;
-    border-radius: 5px;
     user-select: none;
 }
 
@@ -328,7 +337,7 @@ h6{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background: #444;
+    background: #2d2d2d;
     padding: 0 15px;
 }
 
@@ -357,6 +366,8 @@ input:checked + .faq-question + .faq-answer {
 .footer-items {
     margin: 0 47.5px;
     padding: 30px 45px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .footer-top{
